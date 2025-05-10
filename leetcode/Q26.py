@@ -12,9 +12,19 @@
 #     output.append(i)
 # print(len(output),",",(output))
 nums=[1,1,2]
-k = 1  # index for placing next unique element
-for i in range(1, len(nums)):
-    if nums[i] != nums[i - 1]:
-        nums[k] = nums[i]
-        k += 1
-print(k)
+k=0
+count=0
+for i in range(0,len(nums)-1):
+    j=i+1
+    for j in range(j,len(nums)-1):
+        if nums[i]==nums[j]:
+            nums.remove((nums[j]))
+            count=+1
+        j=+1
+print(nums)        
+k=len(nums)   
+ans=f"{k} , nums ={nums}"    
+print(ans) 
+
+
+
